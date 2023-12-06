@@ -1,11 +1,15 @@
+#Use a select statement to order the items byt price
 select *
 from superstore
 order by price desc;
+
 select max(price)
 from superstore;
+
 select sum(price)
 from superstore
 where category = "Kitchen Supplies";
+
 select stock_quantity
 from superstore
 where item_name = "Smart LED TV";
