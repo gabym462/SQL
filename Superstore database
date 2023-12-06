@@ -1,15 +1,18 @@
-#Use a select statement to order the items byt price
+#Use a select statement to order the items by price.
 select *
 from superstore
 order by price desc;
 
+#Show a statistic about item prices.
 select max(price)
 from superstore;
 
+#Show a statistic about price for items in catergory Kitchen Supplies.
 select sum(price)
 from superstore
 where category = "Kitchen Supplies";
 
+#Use a select statement to find stock quantity for items named Smart LED TV. 
 select stock_quantity
 from superstore
 where item_name = "Smart LED TV";
