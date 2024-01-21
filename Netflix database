@@ -4,3 +4,26 @@
 SELECT count(*)
 FROM "netflix_titles_info"
 WHERE type='Movie';
+
+# This shows when the latest data was added to the database.
+SELECT max(date(date_added))
+FROM "netflix_titles_info";
+
+# This shows all the titles of either TV shows or Movies, sorted alphabetically.
+SELECT title
+FROM "netflix_titles_info"
+Order by title asc;
+
+# This joins the titles table and the people table to find the director from one and the movie title from another.
+SELECT director
+from "netflix_titles_info" titles
+left join "netflix_people" people
+on titles.show_id=people.show_id
+where titles.title= 'The Starling';
+
+# This shows the oldest movie's release year.
+SELECT title, release_year
+FROM "netflix_titles_info"
+WHERE type='Movie'
+ORDER BY release_year asc
+LIMIT 1;
