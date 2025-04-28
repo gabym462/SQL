@@ -3,11 +3,11 @@ select *
 from superstore
 order by price desc;
 
-#Show a statistic about item prices.
+#Find the maximum spent from the date.
 select max(price)
 from superstore;
 
-#Show a statistic about price for items in catergory Kitchen Supplies.
+#Use a select statement to find the total price spent on items in catergory Kitchen Supplies.
 select sum(price)
 from superstore
 where category = "Kitchen Supplies";
